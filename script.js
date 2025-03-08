@@ -71,7 +71,7 @@ function handleCommand(command) {
             output = 'Opening GUI portfolio in a new tab...';
             break;
         case 'repo':
-            window.open('https://github.com/Vasoyasharan/terminal-portfolio', '_blank');
+            window.open('https://github.com/Vasoyasharan/Terminal-Portfolio', '_blank');
             output = 'Opening project repository in a new tab...';
             break;
         case 'socials':
