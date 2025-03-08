@@ -1,0 +1,110 @@
+/* styles.css */
+body {
+    background-color: #1e1e1e; /* Dark background */
+    color: #ffffff; /* White text */
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal {
+    background-color: #000000; /* Pure black for terminal */
+    border-radius: 5px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.terminal-header {
+    background-color: #333333; /* Dark gray for header */
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.button.close { background-color: #ff5f56; }
+.button.minimize { background-color: #ffbd2e; }
+.button.maximize { background-color: #27c93f; }
+
+.title {
+    flex-grow: 1;
+    text-align: center;
+    color: #ccc;
+}
+
+.terminal-body {
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.output {
+    white-space: pre-wrap;
+    margin-bottom: 10px;
+    color: #ffffff; /* White text */
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+}
+
+.prompt {
+    margin-right: 10px;
+    color: #00aaff; /* Blue prompt */
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    color: #ffffff; /* White text */
+    outline: none;
+    flex-grow: 1;
+    font-family: 'Courier New', monospace;
+}
+
+a {
+    color: #00aaff; /* Blue links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.input::after {
+    content: '|';
+    animation: blink 1s infinite;
+}
+
+.input-line input[disabled] {
+    color: #000000; /* Gray out the executed command */
+    cursor: not-allowed; /* Change cursor to indicate disabled state */
+}
+
+.blue {
+    color: #00aaff; /* Blue color */
+}
