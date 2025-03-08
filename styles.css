@@ -9,7 +9,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px; /* Add padding for smaller screens */
+    padding: 10px; /* Add padding for smaller screens */
 }
 
 .terminal {
@@ -55,16 +55,16 @@ body {
 
 .terminal-body {
     padding: 15px; /* Reduce padding for smaller screens */
-    height: 60vh; /* Use viewport height for better scaling */
+    height: 80vh; /* Increase height for better usability */
     overflow-y: auto;
     font-size: 14px; /* Smaller font size for mobile */
+    line-height: 1.5; /* Improve readability */
 }
 
 .output {
     white-space: pre-wrap;
     margin-bottom: 10px;
     color: #ffffff; /* White text */
-    line-height: 1.5; /* Improve readability */
 }
 
 .input-line {
@@ -87,6 +87,7 @@ body {
     flex-grow: 1;
     font-family: 'Courier New', monospace;
     font-size: 14px; /* Smaller font size for mobile */
+    padding: 8px; /* Add padding for better touch experience */
 }
 
 a {
@@ -120,29 +121,31 @@ a:hover {
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
     body {
-        padding: 10px; /* Reduce padding for smaller screens */
+        padding: 0; /* Remove padding for full-width effect */
     }
 
     .terminal {
         width: 100%; /* Full width on mobile */
+        height: 100vh; /* Full height on mobile */
         border-radius: 0; /* Remove border radius for full-width effect */
     }
 
     .terminal-body {
-        height: 70vh; /* Increase height for better usability */
+        height: calc(100vh - 50px); /* Adjust height to account for header */
         padding: 10px; /* Reduce padding for smaller screens */
-        font-size: 12px; /* Smaller font size for mobile */
+        font-size: 14px; /* Slightly larger font size for better readability */
     }
 
     .title {
-        font-size: 12px; /* Smaller font size for mobile */
+        font-size: 14px; /* Slightly larger font size for better readability */
     }
 
     .prompt {
-        font-size: 12px; /* Smaller font size for mobile */
+        font-size: 14px; /* Slightly larger font size for better readability */
     }
 
     .input {
-        font-size: 12px; /* Smaller font size for mobile */
+        font-size: 14px; /* Slightly larger font size for better readability */
     }
 }
+
